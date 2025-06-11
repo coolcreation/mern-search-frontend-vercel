@@ -28,8 +28,8 @@ function App() {
         <Route path="/ContactPage" element={ <ContactPage /> }/>
         <Route path="/ProductPage" element={ <ProductPage /> }/>
 
-        <Route path="/AdminHomePage" element={ <AdminHomePage /> }/>
-        <Route path="/AdminProductPage" element={ <AdminProductsPage /> }/>
+        <Route path="/adminHomePage" element={ <AdminHomePage /> }/>
+        <Route path="/adminProductPage" element={ <AdminProductsPage /> }/>
         
       </Routes>  
     </>
