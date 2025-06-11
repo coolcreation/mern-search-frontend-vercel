@@ -49,9 +49,9 @@ export default function Navbar() {
 
                     <li className="nav-item ms-lg-auto me-lg-4">
 
-                        <Link className="nav-link link position-relative d-none" to="/adminHomePage">
+                        {/* <Link className="nav-link link position-relative d-none" to="/adminHomePage">
                           <img src={'./admin-icon.png'} alt="" width="30"/>
-                        </Link>
+                        </Link> */}
 
                         <Link className="nav-link link" to="/cartPage">
                           <ImCart className="cart-icon"/>
