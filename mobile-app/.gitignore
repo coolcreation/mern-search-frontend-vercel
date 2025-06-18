@@ -1,5 +1,6 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
+
 # Ignore all .env files
 **/.env 
 
@@ -39,5 +40,3 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
-
-app-example
