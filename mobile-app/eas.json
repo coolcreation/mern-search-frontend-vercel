@@ -1,0 +1,24 @@
+{
+  "cli": {
+    "version": ">= 16.10.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      // ADD THESE LINES UNDER THE "development" PROFILE
+      "ios": {
+        "resourceClass": "m-medium", // Keep this if it's there
+        "credentialsSource": "expo" // <-- ADD THIS LINE
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}
