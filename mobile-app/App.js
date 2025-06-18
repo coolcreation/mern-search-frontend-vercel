@@ -52,7 +52,22 @@ export default function App() {
       <Text style={styles.title}>Our Products</Text>
       <FlatList
         data={products}
-        keyExtractor={(item) => item._id.$oid} // Use the _id.$oid for unique key
+        // keyExtractor={(item) => item._id.$oid} // Use the _id.$oid for unique key
+
+        keyExtractor={(item, index) => {
+          // Prioritize _id.$oid if available (MongoDB object ID in serialized format)
+          if (item._id && typeof item._id === 'object' && item._id.$oid) {
+            return item._id.$oid;
+          }
+          // Fallback to _id directly if it's a string (MongoDB ID as a plain string)
+          if (item._id && typeof item._id === 'string') {
+            return item._id;
+          }
+          // If no suitable ID is found, use the index as a last resort.
+          // (Generally discouraged if list items reorder, but safe for static fetches)
+          return index.toString();
+        }}
+
         renderItem={({ item }) => (
           <View style={styles.productItem}>
             <Text style={styles.productName}>{item.baseName}</Text>
