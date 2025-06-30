@@ -1,3 +1,4 @@
+// App.js  (React Native)
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
 import axios from 'axios';
