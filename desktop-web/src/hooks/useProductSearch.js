@@ -18,7 +18,7 @@ export default function useProductsSearch(query) {
         // const res = await axios.get(`http://localhost:8000/api/search?q=${query}`);
 
         // Get the backend URL from an environment variable injected by Vercel/Vite
-        const backendUrl = import.meta.env.VITE_APP_BACKEND_URL || process.env.REACT_APP_BACKEND_URL;
+        const backendUrl = import.meta.env.VITE_APP_BACKEND_URL
 
         // ... inside fetchResults function ...
         if (!backendUrl) { // Add a check to ensure the URL is present

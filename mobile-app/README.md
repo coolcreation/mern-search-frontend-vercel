@@ -33,22 +33,52 @@ npx expo install react-dom react-native-web @expo/metro-runtime
 **Our folder structure should look like this (slightly modified from `blank template`):**
 ``` 
 mobile-app/
-├── .expo/
-│   └── (local Expo CLI files, cache)
+├── .expo/                 # local Expo CLI files, cache
 ├── app/
-│   ├── _layout.jsx     # This is the root layout for Expo Router
+│   ├── _layout.jsx        # This is the root layout for Expo Router
 │   ├── index.jsx
-├── assets/
-│   ├── adaptive-icon.png
-│   ├── favicon.png
-│   ├── icon.png
-│   └── splash.png
+│   ├── aboutPage.jsx
+│   ├── contactPage.jsx
+│   ├── productPage.jsx
+│   └── cartPage.jsx
+├── assets/                # images, icons, etc.
 ├── node_modules/
-├── .gitignore
 ├── app.json
 ├── package.json
-├── README.md
-└── package-lock.json
+├── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+**8. Install Drawer + React Navigation ecosystem:**
+
+```
+npm install @react-navigation/native @react-navigation/drawer
+```
+
+
+**9. Install Gesture Handler + Reanimated (required by navigation/drawer):**
+
+```
+npx expo install react-native-gesture-handler react-native-reanimated
+```
+
+Add this at the top of `App.js` (Expo handles most cases automatically, so usually no manual config needed anymore):
+```
+import 'react-native-gesture-handler';
+```
+
+---
+
+**10. Install Vector Icons:**
+```
+npm install react-native-vector-icons
+```
+---
+
+**11. Install Expo Linear Gradient:**
+```
+npx expo install expo-linear-gradient
 ```
 
 **Go here and follow the instructions:**
@@ -56,13 +86,7 @@ mobile-app/
 ```
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
 ```  
-**Use Vector Icons for React Native**
-```
-npm install react-native-vector-icons
-```
-**Install package to use gradient**
-```
-npx expo install expo-linear-gradient
-```
+
+
 
 
