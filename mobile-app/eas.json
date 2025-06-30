@@ -8,16 +8,14 @@
       "developmentClient": true,
       "distribution": "internal",
       "ios": {
-        "resourceClass": "m-medium" // Keep this line if it's there
+        "resourceClass": "m-medium"
       }
-      // The "ios" block should NOT contain "credentialsSource": "expo"
     },
-    // ADD THIS NEW PROFILE BELOW THE "development" PROFILE
     "development-simulator": {
       "developmentClient": true,
-      "distribution": "internal", // This is fine here
+      "distribution": "internal",
       "ios": {
-        "simulator": true // THIS IS THE KEY LINE for simulator build
+        "simulator": true
       }
     },
     "preview": {
